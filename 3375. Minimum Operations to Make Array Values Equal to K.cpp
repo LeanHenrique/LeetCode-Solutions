@@ -5,7 +5,7 @@ public:
         
         for(int element: nums){
             if(element < k) return -1;
-            if(distinct.find(element) == distinct.end() && element > k) distinct.emplace(element);
+            if(element > k)distinct.insert(element);
         }
             return distinct.size();
     }
